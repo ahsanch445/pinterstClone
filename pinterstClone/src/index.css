@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.border{
+width: 80%;
+display: flex;
+justify-content: center;
+align-items: center;
+border: 2px solid gray
+;
+height: 4vw;
+
+    margin: 1vw;
+    padding: 1vw;
+}
+.border:focus{
+    outline: 2px solid rgb(135, 135, 253);
+}
+
+  
+.ahsan{
+    border: 1px rgb(156, 153, 153) solid;
+}
+  /* Change the outline color on focus */
+.ahsan:focus {
+    outline: 2px solid rgb(124, 179, 216); /* Replace #ff0000 with the desired color code */
+  }
+
+  .overlay {
+  
+background-color: white;
+  }
