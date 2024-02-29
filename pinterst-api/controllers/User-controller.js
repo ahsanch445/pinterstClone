@@ -1,6 +1,6 @@
 const userModel = require("../models/user-model")
 var validator = require("email-validator");
-const bcrypt = require("bcrypt")
+const bcrypt = require("bcryptjs")
 const cloudinary = require('../Utils/Cloudinry')
 const upload = require("../middlewares/Multer")
 const jwt = require("jsonwebtoken")
