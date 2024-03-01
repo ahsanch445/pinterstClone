@@ -1,9 +1,10 @@
 {
   "version": 2,
+  "name": "pinterst",
   "builds": [
-    { "src": "app.js", "use": "@vercel/node" }
+     { "src": "app.js", "use": "@vercel/node" }
   ],
-  "engines": {
-    "node": "18.x"
-  }
+  "routes": [
+     { "src": "/(.*)", "dest": "/app.js" }
+  ]
 }
