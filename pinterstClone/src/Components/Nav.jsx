@@ -11,7 +11,7 @@ const Nav = ({setSearch}) => {
   let navigate = useNavigate()
   const handalLogout = async ()=>{
 try {
-  let res = await axios.post("http://localhost:3000/users/logout")
+  let res = await axios.post("https://pinterst-api-express.vercel.app/users/logout")
 if(res.data.message = "user is logout success fully"){
   
  
@@ -21,7 +21,7 @@ localStorage.removeItem("token1")
 
     navigate("/login")
 } catch (error) {
-  console.error({message:"you have a error in logout route"})
+  console.error({message:"you have a error in logout route" },error)
 }
 
 

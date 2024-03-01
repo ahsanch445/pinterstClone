@@ -9,7 +9,7 @@ const UserProvider = ({children})=>{
     const [UpdateAuth, setUpdateAuth] = useState({})
     const [isAuth, setisAuth] = useState(false)
  
- 
+ console.log(userAuth)
 
 
     useEffect(() => {
@@ -17,14 +17,14 @@ const UserProvider = ({children})=>{
       const getUser =async ()=>{
         
        try {
-        let res =  await axios.get("http://localhost:3000/users/login")
-       
+        let res =  await axios.get("https://pinterst-api-express.vercel.app/users/login")
+       console.log(res.data)
        if(res.data.user.email){
         setisAuth(true)
        }
        setuserAuth(res.data.user)
       
-       localStorage.setItem("token1", res.data.user._id)
+       localStorage.setItem("token1", res?.data?.user?._id)
    
        } catch (error) {
    
