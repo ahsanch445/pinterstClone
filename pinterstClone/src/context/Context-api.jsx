@@ -15,11 +15,15 @@ const UserProvider = ({children})=>{
     useEffect(() => {
      
       const getUser =async ()=>{
-        
+        const allCookies = Cookies.get();
+
+
+console.log('All Cookies:', allCookies);
        try {
         let res =  await axios.get("http://localhost:3000/users/login",{
           headers:{
             "Content-Type":"application/json",
+            "Authorization":`Bearer ${allCookies}`
           },
           withCredentials:true
         })

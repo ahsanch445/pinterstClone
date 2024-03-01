@@ -12,6 +12,7 @@ router.post('/', function(req, res, next) {
   Login(req,res)
 });
 router.post('/login', function(req, res, next) {
+
   LoginAuth(req,res)
 });
 router.get('/login', Protected,getUser);
