@@ -28,7 +28,7 @@ setform({
 
   }
   const handalClick = async()=>{
-    const allCookies = Cookies.get();
+    const allCookies = Cookies.get("token");
 
 
     console.log('All Cookies:', allCookies);
