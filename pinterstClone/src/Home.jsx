@@ -15,7 +15,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
     const getPost = async()=>{
-      let res = await axios.get("https://pinterst-api-express.vercel.app/users/getPost")
+      let res = await axios.get("http://localhost:3000/users/getPost")
       setgetPost(res.data)
       setLoading(false)
     }

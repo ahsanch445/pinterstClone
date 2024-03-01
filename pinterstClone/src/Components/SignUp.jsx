@@ -28,10 +28,10 @@ const SignUp = () => {
   }
   const HandelfromData = async ()=>{
     try{
-     let response =  await axios.post("https://pinterst-api-express.vercel.app/users",form,{
+     let response =  await axios.post("http://localhost:3000/users",form,{
       withCredentials:true
      })
-
+  
      if(response.data.email){
      
       localStorage.setItem("form", JSON.stringify(response.data));

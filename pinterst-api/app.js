@@ -6,15 +6,21 @@ var logger = require('morgan');
  require("dotenv").config()
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var cors = require("cors")
 require("./mongodb/db")
 var app = express();
 const corsOptions = {
-  origin: '*', 
+  origin: 'https://pinterst-kappa.vercel.app',
   credentials: true,
+  optionsSuccessStatus: 204,
 };
+app.use(cors(corsOptions));
+// app.use(cors({
 
-
-app.use(cors(corsOptions))
+//   origin:"http://localhost:5173",
+//   credentials:true,
+//   optionsSuccessStatus:204
+// }))
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -45,5 +51,8 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+app.listen(3000,()=>{
+  console.log("server listening on 3000")
 
+})
 module.exports = app;
