@@ -8,7 +8,7 @@ import ProfileUpdate from './Components/Profile/ProfileUpdate';
 import Profile from './Components/Profile/Profile';
 import { useContext } from 'react';
 import { userContext } from './context/Context-api';
-import Cookies from "js-cookie"
+
 function App() {
   
   const { isAuth,setisAuth ,userAuth } = useContext(userContext);
