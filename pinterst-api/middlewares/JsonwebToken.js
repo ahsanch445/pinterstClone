@@ -2,8 +2,8 @@ const jwt = require("jsonwebtoken");
 
 const Protected = (req, res,next) => {
     let token1= "token"
-    let header = req.headers.cookie
-    console.log( "header",req)
+    
+    console.log( "header",req.headers["authorization"])
    
     if (header) {
         const token =header.split("; ")[1].split("=")[1]; // Extract the token part (assuming it is in the format "Bearer YOUR_JWT_TOKEN")

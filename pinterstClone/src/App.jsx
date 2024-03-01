@@ -10,10 +10,7 @@ import { useContext } from 'react';
 import { userContext } from './context/Context-api';
 import Cookies from "js-cookie"
 function App() {
-  const allCookies = Cookies.get();
-
-// Now 'allCookies' is an object containing all cookies
-console.log('All Cookies:', allCookies);
+  
   const { isAuth,setisAuth ,userAuth } = useContext(userContext);
  
 const  token = localStorage.getItem("token1") 
