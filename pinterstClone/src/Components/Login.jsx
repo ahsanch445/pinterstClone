@@ -31,6 +31,8 @@ setform({
     try {
       let response = await axios.post("http://localhost:3000/users/login",form)
    if( response.data.massage == "user is login"){
+    const token = response.data.token
+    Cookies.set('token', token, { path: '/', expires: 4 });
     console.log(response.data)
     setisAuth(!isAuth)
     naigate("/")

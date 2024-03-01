@@ -9,18 +9,18 @@ var usersRouter = require('./routes/users');
 var cors = require("cors")
 require("./mongodb/db")
 var app = express();
-const corsOptions = {
-  origin: 'https://pinterst-clone-amt.vercel.app',
-  credentials: true,
-  optionsSuccessStatus: 204,
-};
-app.use(cors(corsOptions));
-// app.use(cors({
+// const corsOptions = {
+//   origin: 'https://pinterst-clone-amt.vercel.app',
+//   credentials: true,
+//   optionsSuccessStatus: 204,
+// };
+// app.use(cors(corsOptions));
+app.use(cors({
 
-//   origin:"http://localhost:5173",
-//   credentials:true,
-//   optionsSuccessStatus:204
-// }))
+  origin:"http://localhost:5173",
+  credentials:true,
+  optionsSuccessStatus:204
+}))
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
