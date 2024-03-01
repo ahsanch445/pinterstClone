@@ -3,7 +3,7 @@ import "../style/signUp.css"
 import { Link,useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { userContext } from '../context/Context-api'
-
+import Cookies from 'js-cookie'
 const Login = () => {
   const {setisAuth,userAuth,isAuth} = useContext(userContext)
   let naigate = useNavigate()
