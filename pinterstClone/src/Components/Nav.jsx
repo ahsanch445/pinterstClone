@@ -15,6 +15,7 @@ const Nav = ({setSearch}) => {
   const handalLogout = async ()=>{
 try {
   let res = await axios.post("http://localhost:3000/users/logout")
+  console.log(res.data.message)
 if(res.data.message = "user is logout success fully"){
   
   Cookies.remove("token")

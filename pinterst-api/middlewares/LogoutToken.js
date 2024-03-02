@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken")
 const Logout = (req,res)=>{
 let cookie = req.headers["authorization"];
-
+console.log(cookie)
 if(cookie){
     const token = cookie.split(" ")[1]
     
