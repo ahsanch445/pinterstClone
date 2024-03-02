@@ -13,8 +13,18 @@ const Nav = ({setSearch}) => {
   let navigate = useNavigate()
   
   const handalLogout = async ()=>{
+
 try {
-  let res = await axios.post("http://localhost:3000/users/logout")
+  const cookie = Cookies.get("token")
+  let res = await axios.post("http://localhost:3000/users/logout",{
+  },{
+    headers:{
+      "Content-Type":"application/json",
+      "Authorization":`Bearer ${cookie}`
+    }
+  }
+
+  )
   console.log(res.data.message)
 if(res.data.message = "user is logout success fully"){
   
