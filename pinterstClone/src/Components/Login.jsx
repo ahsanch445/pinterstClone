@@ -28,10 +28,9 @@ setform({
 
   }
   const handalClick = async()=>{
-    const allCookies = Cookies.get("token");
 
 
-    console.log('All Cookies:', allCookies);
+
     try {
       let response = await axios.post("http://localhost:3000/users/login",form,{
         headers:{
