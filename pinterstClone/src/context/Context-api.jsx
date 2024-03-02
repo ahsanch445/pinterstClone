@@ -20,7 +20,7 @@ const UserProvider = ({children})=>{
 
 console.log('All Cookies:', allCookies);
        try {
-        let res =  await axios.get("http://localhost:3000/users/login",{
+        let res =  await axios.get("https://pinterst-api.vercel.app/login",{
           headers:{
             "Content-Type":"application/json",
             "Authorization":`Bearer ${allCookies}`
