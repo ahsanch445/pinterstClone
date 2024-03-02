@@ -12,6 +12,11 @@ const Login = () => {
     email:"",
     password:""
   })
+  useEffect(() => {
+    console.log("hello world")
+    setisAuth(!isAuth)
+   
+  }, [isAuth])
   
   const storedUserString = localStorage.getItem("user");
 
