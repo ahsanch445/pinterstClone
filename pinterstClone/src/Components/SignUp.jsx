@@ -28,7 +28,7 @@ const SignUp = () => {
   }
   const HandelfromData = async ()=>{
     try{
-     let response =  await axios.post("https://pinterst-clone-amt.vercel.app/users",form,{
+     let response =  await axios.post("https://pinterst-api.vercel.app/users",form,{
       withCredentials:true
      })
   

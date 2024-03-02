@@ -43,7 +43,7 @@ const ProfileUpdate = () => {
 
 
    
-      let res = await axios.post("http://localhost:3000/users/Update", formData);
+      let res = await axios.post("https://pinterst-api.vercel.app/users/Update", formData);
       setUpdateAuth(res.data.user)
       // Reset the form fields
       setForm({

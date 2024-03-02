@@ -34,7 +34,7 @@ const Upload = () => {
         formData.append("dis", dis);
         formData.append("post", post);
     
-        let res = await axios.post("https://pinterst-clone-amt.vercel.app/users/userPost", formData,{
+        let res = await axios.post("https://pinterst-api.vercel.app/users/userPost", formData,{
 
 
         onUploadProgress: (progressEvent) => {

@@ -16,7 +16,7 @@ const Nav = ({setSearch}) => {
 
 try {
   const cookie = Cookies.get("token")
-  let res = await axios.post("http://localhost:3000/users/logout",{
+  let res = await axios.post("https://pinterst-api.vercel.app/logout",{
   },{
     headers:{
       "Content-Type":"application/json",
