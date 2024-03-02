@@ -10,7 +10,7 @@ var cors = require("cors")
 require("./mongodb/db")
 var app = express();
 const corsOptions = {
-  origin: 'https://pinterst-clone-amt.vercel.app',
+  origin: 'http://localhost:5174',
   credentials: true,
   optionsSuccessStatus: 204,
 };

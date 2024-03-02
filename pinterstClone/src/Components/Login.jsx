@@ -35,7 +35,7 @@ setform({
       let response = await axios.post("http://localhost:3000/users/login",form,{
         headers:{
           "Content-Type":"application/json",
-          "Authorization":`Bearer ${allCookies}`
+          // "Authorization":`Bearer ${allCookies}`
         },
         withCredentials:true
       })

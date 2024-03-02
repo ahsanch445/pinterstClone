@@ -42,9 +42,9 @@ if(token){
             ) : (
               <>
 
-         <Route path="/" element={<Navigate to="/signup" />} />
+        
 
-                <Route path="/signup" element={<SignUp />} />
+                <Route path="/" element={<SignUp />} />
                 <Route path="/login" element={<Login />} />
 
               </>
