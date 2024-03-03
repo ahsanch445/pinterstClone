@@ -5,7 +5,6 @@ import { userContext } from './context/Context-api'
 import axios from 'axios'
 import Loader from './Components/loader/Loader'
 
-
 const Home = () => {
   const [Search, setSearch] = useState()
   const [result, setresult] = useState([])
@@ -15,7 +14,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
     const getPost = async()=>{
-      let res = await axios.get("https://pinterst-clone-amt.vercel.app/users/getPost")
+      let res = await axios.get("https://pinterst-clone-amt.vercel.app/users/getPost",{withCredentials:true})
       setgetPost(res.data)
       setLoading(false)
     }
